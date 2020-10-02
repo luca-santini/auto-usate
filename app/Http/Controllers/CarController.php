@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Car;
 
-class SellController extends Controller
+class CarController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +24,6 @@ class SellController extends Controller
      */
     public function index()
     {
-        return view('sell');
+        return view('car');
     }
 }
