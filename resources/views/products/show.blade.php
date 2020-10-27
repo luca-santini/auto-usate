@@ -8,10 +8,10 @@
             <div class="col-12">
                 <h1 class="mt-3 mb-3">Dettaglio prodotto</h1>
                 <ul>
-                    <li>ID: {{ $product->id }}</li>
-                    <li>Nome: {{ $product->name }}</li>
-                    <li>Descrizione: {{ $product->description }}</li>
-                    <li>Prezzo: {{ $product->price }}</li>
+                    <li>ID: {{ $prodotto->id }}</li>
+                    <li>Nome: {{ $prodotto->name }}</li>
+                    <li>Descrizione: {{ $prodotto->description }}</li>
+                    <li>Prezzo: {{ $prodotto->price }}</li>
                 </ul>
             </div>
         </div>

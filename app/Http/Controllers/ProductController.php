@@ -14,8 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        dd($products);
+        $prodotti = Product::all();
+        return view('products.index', compact('prodotti'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -36,7 +36,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric|min:0.01'
+        ]);
+        $dati = $request->all();
+        $nuovo_prodotto = new Product();
+        $nuovo_prodotto->fill($dati);
+        $nuovo_prodotto->save();
+        return redirect()->route('products.index');
     }
 
     /**
@@ -47,40 +55,52 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $prodotto = Product::find($id);
+        return view('products.show', compact('prodotto'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
-    {
-        //
-    }
+       {
+           $product = Product::find($id);
+           if($product) {
+               return view('products.edit', compact('product'));
+           }
+           return abort('404');
+       }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+       /**
+        * Update the specified resource in storage.
+        *
+        * @param  \Illuminate\Http\Request  $request
+        * @param  int  $id
+        * @return \Illuminate\Http\Response
+        */
+       public function update(Request $request, $id)
+       {
+           $request->validate([
+               'name' => 'required|max:255',
+               'price' => 'required|numeric|min:0.01'
+           ]);
+           $dati = $request->all();
+           $product = Product::find($id);
+           if($product) {
+               $product->update($dati);
+           }
+           return redirect()->route('products.index');
+       }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+       /**
+        * Remove the specified resource from storage.
+        *
+        * @param  int  $id
+        * @return \Illuminate\Http\Response
+        */
+       public function destroy($id)
+       {
+           $product = Product::find($id);
+           if($product) {
+               $product->delete();
+           }
+           return redirect()->route('products.index');
+       }
 }
