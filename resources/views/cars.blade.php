@@ -15,22 +15,22 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Renault</th>
-                  <td>Clio</td>
-                  <td>Diesel</td>
-                  <td>5</td>
+                  <th scope="row">{{ $marca }}</th>
+                  <td>{{ $modello }}</td>
+                  <td>{{ $carburante }}</td>
+                  <td>{{ $porte }}</td>
                 </tr>
                 <tr>
-                    <th scope="row">Renault</th>
-                    <td>Clio</td>
-                    <td>Diesel</td>
-                    <td>5</td>
+                  <th scope="row">{{ $marca }}</th>
+                  <td>{{ $modello }}</td>
+                  <td>{{ $carburante }}</td>
+                  <td>{{ $porte }}</td>
                 </tr>
                 <tr>
-                    <th scope="row">Renault</th>
-                    <td>Clio</td>
-                    <td>Diesel</td>
-                    <td>5</td>
+                  <th scope="row">{{ $marca }}</th>
+                  <td>{{ $modello }}</td>
+                  <td>{{ $carburante }}</td>
+                  <td>{{ $porte }}</td>
                 </tr>
               </tbody>
             </table>
