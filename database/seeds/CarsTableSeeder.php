@@ -32,6 +32,12 @@ class CarsTableSeeder extends Seeder
                     'porte' => 3
             ],
             [
+                    'marca' => 'Seat',
+                    'modello' => 'Leon',
+                    'carburante' => 'Diesel',
+                    'porte' => 3
+            ],
+            [
                     'marca' => 'Audi',
                     'modello' => 'A3',
                     'carburante' => 'Diesel',
