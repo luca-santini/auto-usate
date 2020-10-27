@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/cars', 'CarController@index')->name('car');
+Route::get('/cars', 'CarController@index');

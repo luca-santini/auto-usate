@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <table class="table table-striped">
@@ -13,14 +13,15 @@
                       <th scope="col">Porte</th>
                     </tr>
                   </thead>
-                  <tbody>@forelse ($cars as $car)
+                  <tbody>
+                      @foreach($cars as $car)
+                    <tr>
                       <td>{{ $car->marca }}</td>
                       <td>{{ $car->modello }}</td>
                       <td>{{ $car->carburante }}</td>
                       <td>{{ $car->porte }}</td>
-                  @empty
-
-                  @endforelse
+                    </tr>
+                  @endforeach
                   </tbody>
                 </table>
             </div>

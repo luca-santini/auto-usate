@@ -14,24 +14,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">{{ $marca }}</th>
-                  <td>{{ $modello }}</td>
-                  <td>{{ $carburante }}</td>
-                  <td>{{ $porte }}</td>
-                </tr>
-                <tr>
-                  <th scope="row">{{ $marca }}</th>
-                  <td>{{ $modello }}</td>
-                  <td>{{ $carburante }}</td>
-                  <td>{{ $porte }}</td>
-                </tr>
-                <tr>
-                  <th scope="row">{{ $marca }}</th>
-                  <td>{{ $modello }}</td>
-                  <td>{{ $carburante }}</td>
-                  <td>{{ $porte }}</td>
-                </tr>
+                    @foreach($cars as $car)
+                        <tr>
+                          <td>{{ $car->marca }}</td>
+                          <td>{{ $car->modello }}</td>
+                          <td>{{ $car->carburante }}</td>
+                          <td>{{ $car->porte }}</td>
+                        </tr>
+                      @endforeach
               </tbody>
             </table>
         </div>

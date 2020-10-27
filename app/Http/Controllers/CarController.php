@@ -23,12 +23,7 @@ class CarController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index() {
-    $data = [
-        'marca' => 'Renault',
-        'modello' => 'Clio',
-        'carburante' => 'Diesel',
-        'porte' => 5
-    ];
-        return view('cars', $data);
+        $cars = Car::all();
+        return view('cars', ['cars'=> $cars]);
     }
 }
