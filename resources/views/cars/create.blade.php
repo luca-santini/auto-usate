@@ -11,26 +11,26 @@
                     @csrf
                     <div class="form-group">
                         <label for="marca">Marca</label>
-                        <input type="text" name="name" class="form-control" id="marca" placeholder="Marca auto">
+                        <input type="text" name="marca" class="form-control" id="marca" placeholder="Marca auto">
                     </div>
                     <div class="form-group">
                         <label for="modello">Modello</label>
-                        <input type="text" name="description" class="form-control" id="modello" placeholder="Modello auto">
+                        <input type="text" name="modello" class="form-control" id="modello" placeholder="Modello auto">
                     </div>
                     <div class="form-group">
-                        <label for="modello">Carburante</label>
-                        <select class="custom-select" id="carburante">
+                        <label for="carburante">Carburante</label>
+                        <select name="carburante" class="custom-select" id="carburante">
                             <option selected>Seleziona</option>
-                            <option value="1">Benzina</option>
-                            <option value="2">Diesel</option>
+                            <option value="benzina">Benzina</option>
+                            <option value="diesel">Diesel</option>
                          </select>
                     </div>
                     <div class="form-group">
-                        <label for="modello">Porte</label>
-                        <select class="custom-select" id="porte">
+                        <label for="porte">Porte</label>
+                        <select name="porte" class="custom-select" id="porte">
                             <option selected>Seleziona</option>
-                            <option value="1">3</option>
-                            <option value="2">5</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
                          </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Salva</button>
