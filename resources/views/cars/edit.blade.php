@@ -21,29 +21,29 @@
                     @method('PUT')
                     @csrf
                     <div class="form-group">
-                        <label for="nome">Marca</label>
-                        <input type="text" name="name" class="form-control" id="marca" placeholder="Nome auto" value="{{ old('marca', $car->marca) }}">
+                        <label for="marca">Marca</label>
+                        <input type="text" name="marca" class="form-control" id="marca" placeholder="Nome auto" value="{{ old('marca', $car->marca) }}">
                         @error ('name')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="descrizione">Modello</label>
-                        <input type="text" name="description" class="form-control" id="modello" placeholder="Modello">{{ old('description', $car->modello) }}>
-                        @error ('description')
+                        <label for="modello">Modello</label>
+                        <input type="text" name="modello" class="form-control" id="modello" placeholder="Nome modello" value="{{ old('modello', $car->modello) }}">
+                        @error ('modello')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="prezzo">Carburante</label>
-                        <input name="price" class="form-control" id="prezzo" placeholder="Carburante" value="{{ old('carburante', $car->carburante) }}">
+                        <label for="carburante">Carburante</label>
+                        <input name="carburante" class="form-control" id="carburante" placeholder="Nome carburante" value="{{ old('carburante', $car->carburante) }}">
                         @error ('price')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="porte">Porte</label>
-                        <input name="price" class="form-control" id="prezzo" placeholder="Porte" value="{{ old('carburante', $car->porte) }}">
+                        <input name="porte" class="form-control" id="porte" placeholder="Numero porte" value="{{ old('porte', $car->porte) }}">
                         @error ('price')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror

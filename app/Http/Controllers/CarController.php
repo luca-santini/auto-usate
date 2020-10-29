@@ -69,7 +69,11 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $car = Car::find($id);
+        if($car) {
+            return view('cars.edit', compact('car'));
+        }
+        return abort('404');
     }
 
     /**
@@ -81,7 +85,16 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $request->validate([
+        //     'name' => 'required|max:255',
+        //     'price' => 'required|numeric|min:0.01'
+        // ]);
+        $dati = $request->all();
+        $car = Car::find($id);
+        if($car) {
+            $car->update($dati);
+        }
+        return redirect()->route('cars.index');
     }
 
     /**
@@ -92,6 +105,10 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $car = Car::find($id);
+        if($car) {
+            $car->delete();
+        }
+        return redirect()->route('cars.index');
     }
 }
