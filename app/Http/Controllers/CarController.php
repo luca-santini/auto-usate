@@ -36,10 +36,12 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required|max:255',
-        //     'price' => 'required|numeric|min:0.01'
-        // ]);
+        $request->validate([
+            'marca' => 'required|max:255',
+            'modello' => 'required|max:255',
+            'carburante' => 'required|max:255',
+            'porte' => 'required|numeric|min:0.01'
+        ]);
         $dati = $request->all();
         $newCar = new Car();
         $newCar->fill($dati);
@@ -85,10 +87,12 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $request->validate([
-        //     'name' => 'required|max:255',
-        //     'price' => 'required|numeric|min:0.01'
-        // ]);
+        $request->validate([
+            'marca' => 'required|max:255',
+            'modello' => 'required|max:255',
+            'carburante' => 'required|max:255',
+            'porte' => 'required|numeric|min:0.01'
+        ]);
         $dati = $request->all();
         $car = Car::find($id);
         if($car) {
