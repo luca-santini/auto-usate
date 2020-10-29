@@ -21,16 +21,16 @@
                         <label for="carburante">Carburante</label>
                         <select name="carburante" class="custom-select" id="carburante">
                             <option selected>Seleziona</option>
-                            <option value="benzina">Benzina</option>
-                            <option value="diesel">Diesel</option>
+                            <option id="carburante" value="benzina">Benzina</option>
+                            <option id="carburante" value="diesel">Diesel</option>
                          </select>
                     </div>
                     <div class="form-group">
                         <label for="porte">Porte</label>
                         <select name="porte" class="custom-select" id="porte">
                             <option selected>Seleziona</option>
-                            <option value="3">3</option>
-                            <option value="5">5</option>
+                            <option id="porte" value="3">3</option>
+                            <option id="porte" value="5">5</option>
                          </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Salva</button>
