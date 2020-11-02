@@ -21,8 +21,8 @@
                         <label for="carburante">Carburante</label>
                         <select name="carburante" class="custom-select" id="carburante">
                             <option selected>Seleziona</option>
-                            <option id="carburante" value="benzina">Benzina</option>
-                            <option id="carburante" value="diesel">Diesel</option>
+                            <option id="carburante" value="Benzina">Benzina</option>
+                            <option id="carburante" value="Diesel">Diesel</option>
                          </select>
                     </div>
                     <div class="form-group">
