@@ -8,6 +8,7 @@
             <div class="col-12">
                 <div class="d-flex justify-content-between align-items-center">
                     <h1 class="mt-3 mb-3">Lista auto</h1>
+                      <input id="myInput" type="text" placeholder="Search.." name="search">
                     <a class="btn btn-primary"
                     href="{{ route('cars.create') }}">
                         Nuovo auto
