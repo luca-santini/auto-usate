@@ -23,6 +23,7 @@
                             <option selected>Seleziona</option>
                             <option id="carburante" value="Benzina">Benzina</option>
                             <option id="carburante" value="Diesel">Diesel</option>
+                            <option id="carburante" value="GPL">GPL</option>
                          </select>
                     </div>
                     <div class="form-group">
